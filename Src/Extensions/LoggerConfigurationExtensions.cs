@@ -11,24 +11,28 @@ public static class LoggerConfigurationExtensions
     /// Add serilog with custom implementation.
     /// </summary>
     /// <param name="hostBuilder"></param>
-    public static void UseCustomSerilog(this HostBuilder hostBuilder)
+    public static HostBuilder UseCustomSerilog(this HostBuilder hostBuilder)
     {
         hostBuilder.UseSerilog((hostContext, services, loggerConfig) =>
         {
             loggerConfig.ConfigureSerilog(hostContext);
         });
+
+        return hostBuilder;
     }
 
     /// <summary>
     /// Add serilog with custom implementation.
     /// </summary>
     /// <param name="hostBuilder"></param>
-    public static void UseCustomSerilog(this IHostBuilder hostBuilder)
+    public static IHostBuilder UseCustomSerilog(this IHostBuilder hostBuilder)
     {
         hostBuilder.UseSerilog((hostContext, services, loggerConfig) =>
         {
             loggerConfig.ConfigureSerilog(hostContext);
         });
+
+        return hostBuilder;
     }
 
     /// <summary>
@@ -36,9 +40,7 @@ public static class LoggerConfigurationExtensions
     /// </summary>
     /// <param name="logger"></param>
     /// <param name="hostContext"></param>
-    public static void ConfigureSerilog(
-        this LoggerConfiguration logger,
-        HostBuilderContext hostContext)
+    public static void ConfigureSerilog(this LoggerConfiguration logger, HostBuilderContext hostContext)
     {
         // Add loki configuration.
         var logConfiguration = new LogOption();
