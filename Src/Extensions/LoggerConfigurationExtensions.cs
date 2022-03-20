@@ -43,8 +43,8 @@ namespace Netboot.Logging.Extensions
         public static void ConfigureSerilog(this LoggerConfiguration logger, HostBuilderContext hostContext)
         {
             // Add loki configuration.
-            var logConfiguration = new LogOption();
-            hostContext.Configuration.GetSection(nameof(LogOption)).Bind(logConfiguration);
+            var logConfiguration = new LogConfiguration();
+            hostContext.Configuration.GetSection(nameof(LogConfiguration)).Bind(logConfiguration);
 
             // Add user configuration.
             var config = logger.ReadFrom.Configuration(hostContext.Configuration);
