@@ -5,7 +5,7 @@
         public LogFileOption File { get; set; }
         public LogConsoleOption Console { get; set; }
 
-        public LogOption()
+        public LogConfiguration()
         {
             File = new LogFileOption();
             Console = new LogConsoleOption();
