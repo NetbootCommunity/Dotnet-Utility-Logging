@@ -1,15 +1,8 @@
-# Netboot - Logging
+# Netboot - Logging [![NuGet Version](http://img.shields.io/nuget/v/Netboot.Logging.svg?style=flat)](https://www.nuget.org/packages/Netboot.Logging/)  [![Reliability Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=reliability_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Security Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=security_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Code Smells](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=code_smells)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging)
 
-Micro library for my automation utilities.
+This project is an add-on to [Serilog](https://serilog.net) to easily configure the logging.
 
-## Project Status
-
-[![Tests](https://github.com/NetbootCompany/Netboot-Logging/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/NetbootCompany/Netboot-Logging/actions/workflows/build-and-test.yml)
-[![Publish Nuget package](https://github.com/NetbootCompany/Netboot-Logging/actions/workflows/build-and-publish-nuget.yml/badge.svg)](https://github.com/NetbootCompany/Netboot-Logging/actions/workflows/build-and-publish-nuget.yml)
-
-[![Reliability Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=reliability_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging)
-[![Security Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=security_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging)
-[![Code Smells](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=code_smells)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging)
+> This product is part of netboot utilities for its own solution, you can freely use this project at your own risk.
 
 ## Configuration
 
