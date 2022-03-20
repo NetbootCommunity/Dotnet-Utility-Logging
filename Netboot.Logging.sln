@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{4E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{D92BF86A-419B-421D-8D7B-2DBA73D075EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netboot.Demo.WebApplication", "demo\Netboot.Demo.WebApplication\Netboot.Demo.WebApplication.csproj", "{95484081-5D4E-43A8-B95A-60D4BB779DEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netboot.Demo.WebApplication", "Demo\Netboot.Demo.WebApplication\Netboot.Demo.WebApplication.csproj", "{95484081-5D4E-43A8-B95A-60D4BB779DEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
