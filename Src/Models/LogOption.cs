@@ -1,13 +1,14 @@
-﻿namespace Netboot.Logging.Models;
-
-public class LogOption
+﻿namespace Netboot.Logging.Models
 {
-    public LogFileOption File { get; set; }
-    public LogConsoleOption Console { get; set; }
-
-    public LogOption()
+    public class LogOption
     {
-        File = new LogFileOption();
-        Console = new LogConsoleOption();
+        public LogFileOption File { get; set; }
+        public LogConsoleOption Console { get; set; }
+
+        public LogOption()
+        {
+            File = new LogFileOption();
+            Console = new LogConsoleOption();
+        }
     }
 }
