@@ -22,7 +22,7 @@ jobs:
         uses: highbyte/sonarscan-dotnet@v2.1.2
         with:
           sonarProjectKey: netboot_logging
-          sonarProjectName:  netboot_logging
+          sonarProjectName:  Netboot Logging
           sonarHostname:  https://sonarqube.netboot.fr
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
