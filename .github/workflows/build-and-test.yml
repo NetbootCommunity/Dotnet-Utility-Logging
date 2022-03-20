@@ -18,5 +18,15 @@ jobs:
       - name: Build
         run: dotnet build --no-restore --configuration Release
 
+      - name: SonarScan
+        uses: highbyte/sonarscan-dotnet@v2.1.2
+        with:
+          sonarProjectKey: netboot_logging
+          sonarProjectName:  netboot_logging
+          sonarHostname:  https://sonarqube.netboot.fr
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Test
         run: dotnet test --no-build --verbosity normal
