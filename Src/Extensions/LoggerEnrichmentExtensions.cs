@@ -1,4 +1,4 @@
-﻿using MicroAutomation.Log.Models;
+﻿using Netboot.Logging.Models;
 using Serilog;
 using Serilog.Configuration;
 using Serilog.Core;
@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MicroAutomation.Log.Extensions;
+namespace Netboot.Logging.Extensions;
 
 public static class LoggerEnrichmentExtensions
 {

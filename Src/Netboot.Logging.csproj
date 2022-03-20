@@ -1,10 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Authors>Thomas ILLIET</Authors>
     <Company>Netboot</Company>
-    <Product>MicroAutomation</Product>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,10 +13,10 @@
     <Copyright>Thomas ILLIET</Copyright>
     <PackageIconUrl />
     <PackageIcon>Logo.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/NetbootHome/MicroAutomation-Log</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/NetbootHome/MicroAutomation-Log/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/NetbootHome/Metboot-Logging</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/NetbootHome/Metboot-Logging/blob/main/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/NetbootHome/MicroAutomation-Log</RepositoryUrl>
+    <RepositoryUrl>https://github.com/NetbootHome/Metboot-Logging</RepositoryUrl>
   </PropertyGroup>
   
   <ItemGroup>

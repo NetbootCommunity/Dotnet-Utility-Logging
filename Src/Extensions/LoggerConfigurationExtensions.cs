@@ -1,9 +1,9 @@
-﻿using MicroAutomation.Log.Models;
+﻿using Netboot.Logging.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace MicroAutomation.Log.Extensions;
+namespace Netboot.Logging.Extensions;
 
 public static class LoggerConfigurationExtensions
 {

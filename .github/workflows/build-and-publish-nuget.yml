@@ -22,7 +22,7 @@ jobs:
         run: dotnet test --no-build --verbosity normal --configuration Release
 
       - name: Pack
-        run: dotnet pack ./Src/MicroAutomation.Log.csproj --output Nupkgs --no-build --configuration Release -p:PackageVersion=${{ github.event.release.tag_name }}
+        run: dotnet pack ./Src/Netboot.Logging.csproj --output Nupkgs --no-build --configuration Release -p:PackageVersion=${{ github.event.release.tag_name }}
 
       - name: Push
-        run: dotnet nuget push ./Nupkgs/MicroAutomation.Log.${{ github.event.release.tag_name }}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+        run: dotnet nuget push ./Nupkgs/Netboot.Logging.${{ github.event.release.tag_name }}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
