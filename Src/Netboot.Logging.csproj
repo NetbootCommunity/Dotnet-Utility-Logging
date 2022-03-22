@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Authors>Thomas ILLIET</Authors>
     <Company>Netboot</Company>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup>
