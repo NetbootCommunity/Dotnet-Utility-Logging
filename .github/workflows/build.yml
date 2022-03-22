@@ -4,8 +4,7 @@ on:
     branches: [main]
   pull_request:
   release:
-    types: [published]
-    
+    types: [published]  
 jobs:
   format:
     runs-on: ubuntu-latest
@@ -19,7 +18,7 @@ jobs:
     - name: Install dotnet format
       run: dotnet tool install --global dotnet-format --version "6.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json
     - name: Format
-      run: dotnet-format ./Netboot.Logging.sln --verify-no-changes
+      run: dotnet-format --verify-no-changes -v detailed
   scan:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
@@ -39,7 +38,6 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -57,7 +55,6 @@ jobs:
       run: dotnet build --configuration Release
     - name: Test
       run: dotnet test --no-build --configuration Release
-
   merge:
     runs-on: ubuntu-latest
     needs: build
@@ -89,7 +86,6 @@ jobs:
       with:
         name: artifacts
         path: ./artifacts
-
   publish:
     runs-on: ubuntu-latest
     needs: pack
