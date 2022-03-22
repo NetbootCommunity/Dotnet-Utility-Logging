@@ -59,7 +59,7 @@ jobs:
     needs: build
     if: github.event_name == 'pull_request'
     steps:
-    - uses: ridedott/merge-me-action@v2.9.125
+    - uses: ridedott/merge-me-action@v2.9.126
       with:
         PRESET: DEPENDABOT_PATCH 
         MERGE_METHOD: REBASE
