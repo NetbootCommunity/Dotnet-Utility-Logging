@@ -55,10 +55,18 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: '6.0.x'
-    - name: Build
+    - name: Initialize CodeQL
+      if: github.ref == 'refs/heads/main'
+      uses: github/codeql-action/init@v1
+      with:
+        languages: 'csharp'
+    - name: Build Solution
       run: dotnet build --configuration Release
-    - name: Test
+    - name: Test Solution
       run: dotnet test --no-build --configuration Release
+    - name: Analyse Solution
+      if: github.ref == 'refs/heads/main'
+      uses: github/codeql-action/analyze@v1
   merge:
     runs-on: ubuntu-latest
     needs: build
