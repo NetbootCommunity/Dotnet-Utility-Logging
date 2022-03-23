@@ -10,7 +10,8 @@ namespace Netboot.Logging.Extensions
         /// <summary>
         /// Add serilog with custom implementation.
         /// </summary>
-        /// <param name="hostBuilder"></param>
+        /// <param name="hostBuilder">The host builder.</param>
+        /// <returns></returns>
         public static HostBuilder UseCustomSerilog(this HostBuilder hostBuilder)
         {
             hostBuilder.UseSerilog((hostContext, services, loggerConfig) =>
@@ -24,7 +25,8 @@ namespace Netboot.Logging.Extensions
         /// <summary>
         /// Add serilog with custom implementation.
         /// </summary>
-        /// <param name="hostBuilder"></param>
+        /// <param name="hostBuilder">The host builder.</param>
+        /// <returns></returns>
         public static IHostBuilder UseCustomSerilog(this IHostBuilder hostBuilder)
         {
             hostBuilder.UseSerilog((hostContext, services, loggerConfig) =>
@@ -36,10 +38,10 @@ namespace Netboot.Logging.Extensions
         }
 
         /// <summary>
-        /// Add serilog with custom implementation.
+        ///  Add serilog with custom implementation.
         /// </summary>
-        /// <param name="logger"></param>
-        /// <param name="hostContext"></param>
+        /// <param name="logger">The logger.</param>
+        /// <param name="hostContext">The host context.</param>
         public static void ConfigureSerilog(this LoggerConfiguration logger, HostBuilderContext hostContext)
         {
             // Add loki configuration.

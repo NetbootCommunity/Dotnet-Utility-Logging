@@ -13,9 +13,9 @@ namespace Netboot.Logging.Extensions
         /// <summary>
         /// Enrich with the default implementations.
         /// </summary>
-        /// <param name="enrichmentConfiguration"></param>
+        /// <param name="enrichmentConfiguration">The enrichment configuration.</param>
         /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="System.ArgumentNullException">enrichmentConfiguration</exception>
         public static LoggerEnrichmentConfiguration WithDefault(this LoggerEnrichmentConfiguration enrichmentConfiguration)
         {
             if (enrichmentConfiguration == null)
@@ -31,7 +31,7 @@ namespace Netboot.Logging.Extensions
         /// <summary>
         /// Enrich with the custom implementation.
         /// </summary>
-        /// <param name="enrichmentConfiguration"></param>
+        /// <param name="enrichmentConfiguration">The enrichment configuration.</param>
         /// <returns></returns>
         public static LoggerEnrichmentConfiguration WithCustomImplementation(this LoggerEnrichmentConfiguration enrichmentConfiguration)
         {
@@ -47,7 +47,7 @@ namespace Netboot.Logging.Extensions
         /// <summary>
         /// Retrieve all implementations of the selected type.
         /// </summary>
-        /// <typeparam name="TType"></typeparam>
+        /// <typeparam name="TType">The type of the type.</typeparam>
         /// <returns></returns>
         private static List<Type> GetTypesWithInterface<TType>()
         {
