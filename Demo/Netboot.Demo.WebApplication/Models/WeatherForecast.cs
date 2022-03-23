@@ -1,6 +1,6 @@
 using System;
 
-namespace Netboot.Demo.WebApplication
+namespace Netboot.Demo.WebApplication.Models
 {
     public class WeatherForecast
     {

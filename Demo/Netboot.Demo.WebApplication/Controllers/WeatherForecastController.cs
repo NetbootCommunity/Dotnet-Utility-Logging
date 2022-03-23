@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Netboot.Demo.WebApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
