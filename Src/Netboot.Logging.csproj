@@ -1,28 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+  
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
     <Authors>Thomas ILLIET</Authors>
-    <Company>Netboot</Company>
+    <Company>NetbootCompany</Company>
+    <PackageId>Netboot.Logging</PackageId>
+    <PackageDescription>Library to quickly and easily add serilog to a dotnet application.</PackageDescription>
     <IsPackable>true</IsPackable>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <IsPackable>true</IsPackable>
-    <Description>Micro library for my automation utilities</Description>
-    <Authors>Thomas ILLIET</Authors>
-    <Copyright>Thomas ILLIET</Copyright>
-    <PackageIconUrl />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>Logo.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/NetbootHome/Metboot-Logging</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/NetbootHome/Metboot-Logging/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/NetbootCompany/Netboot-Logging/main/Assets/Logo.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/NetbootCompany</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NetbootCompany/Netboot-Logging</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/NetbootHome/Metboot-Logging</RepositoryUrl>
+    <Copyright>Thomas ILLIET, NetbootCompany contributors</Copyright>
+    <PackageTags>utility library log microservice dotnet serilog</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TargetFramework>net6.0</TargetFramework>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
   
   <ItemGroup>
 		<None Include="..\Assets\Logo.png">
 			<Pack>True</Pack>
+      <Visible>false</Visible>
 			<PackagePath></PackagePath>
 		</None>
 	</ItemGroup>
