@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{4E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{D92BF86A-419B-421D-8D7B-2DBA73D075EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netboot.Demo.WebApplication", "Demo\Netboot.Demo.WebApplication\Netboot.Demo.WebApplication.csproj", "{95484081-5D4E-43A8-B95A-60D4BB779DEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netboot.Demo.WebApplication", "Demo\Netboot.Demo.WebApplication\Netboot.Demo.WebApplication.csproj", "{95484081-5D4E-43A8-B95A-60D4BB779DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netboot.Demo.MinimalAPI", "Demo\Netboot.Demo.MinimalAPI\Netboot.Demo.MinimalAPI.csproj", "{9DDAA9F6-6F5E-4D44-88A4-1E7723ABB832}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{95484081-5D4E-43A8-B95A-60D4BB779DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95484081-5D4E-43A8-B95A-60D4BB779DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95484081-5D4E-43A8-B95A-60D4BB779DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDAA9F6-6F5E-4D44-88A4-1E7723ABB832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDAA9F6-6F5E-4D44-88A4-1E7723ABB832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDAA9F6-6F5E-4D44-88A4-1E7723ABB832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDAA9F6-6F5E-4D44-88A4-1E7723ABB832}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F3B4F953-A333-4353-A8CF-6E3A90BE47FF} = {4EE56157-5836-4451-840E-A5650150CF6B}
 		{95484081-5D4E-43A8-B95A-60D4BB779DEB} = {D92BF86A-419B-421D-8D7B-2DBA73D075EC}
+		{9DDAA9F6-6F5E-4D44-88A4-1E7723ABB832} = {D92BF86A-419B-421D-8D7B-2DBA73D075EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {95F16808-F854-4ABE-AC6B-97CC1D229664}
