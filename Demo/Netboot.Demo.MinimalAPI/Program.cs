@@ -3,18 +3,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Netboot.Logging.Extensions;
 using System;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 
 // Create web application builder.
-var location = new Uri(Assembly.GetEntryAssembly().GetName().CodeBase);
-var pathContextRoot = new FileInfo(location.AbsolutePath).Directory.FullName;
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
-{
-    ContentRootPath = pathContextRoot,
-    Args = args
-});
+var builder = WebApplication.CreateBuilder(args);
 
 // Add serilog implementation.
 builder.Host.UseCustomSerilog();

@@ -1,39 +1,37 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Netboot.Logging.Extensions;
-using System;
-using System.IO;
-using System.Reflection;
 
-// Create web application builder.
-var location = new Uri(Assembly.GetEntryAssembly().GetName().CodeBase);
-var pathContextRoot = new FileInfo(location.AbsolutePath).Directory.FullName;
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+namespace Netboot.Demo.WebApplication
 {
-    ContentRootPath = pathContextRoot,
-    Args = args
-});
+    public static class Program
+    {
+        /// <summary>
+        /// Defines the entry point of the application.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
+        public static void Main(string[] args)
+            => CreateHostBuilder(args).Build().Run();
 
-// Add serilog implementation.
-builder.Host.UseCustomSerilog();
+        /// <summary>
+        /// Creates the host builder.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
+        /// <returns></returns>
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            // Initializes a new instance with pre-configured defaults.
+            var builder = Host.CreateDefaultBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+            // Add serilog implementation.
+            builder.UseCustomSerilog();
 
-var app = builder.Build();
+            // Configures a IHostBuilder with defaults for hosting a web app.
+            builder.ConfigureWebHostDefaults(webBuilder
+                => webBuilder.UseStartup<Startup>().UseKestrel());
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+            return builder;
+        }
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
-
-app.Run();

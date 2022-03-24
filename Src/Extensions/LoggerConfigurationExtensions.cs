@@ -2,6 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using System.IO;
+using System.Reflection;
+using System;
 
 namespace Netboot.Logging.Extensions
 {
@@ -64,7 +67,7 @@ namespace Netboot.Logging.Extensions
             if (logConfiguration.File.Status)
             {
                 config.WriteTo.File(
-                path: logConfiguration.File.Path,
+                path: GetLogDirectory(logConfiguration),
                 fileSizeLimitBytes: logConfiguration.File.FileSizeLimitBytes,
                 rollingInterval: logConfiguration.File.RollingInterval,
                 rollOnFileSizeLimit: logConfiguration.File.RollOnFileSizeLimit,
@@ -74,6 +77,21 @@ namespace Netboot.Logging.Extensions
             // Add default enrichments.
             config.Enrich.WithDefault();
             config.Enrich.WithCustomImplementation();
+        }
+
+        /// <summary>
+        /// Gets the log directory.
+        /// </summary>
+        /// <param name="configuration">The configuration.</param>
+        /// <returns></returns>
+        private static string GetLogDirectory(LogConfiguration configuration)
+        {
+            if (configuration.File.Path.StartsWith("/"))
+                return configuration.File.Path;
+
+            var location = new Uri(Assembly.GetEntryAssembly().GetName().CodeBase);
+            var pathContextRoot = new FileInfo(location.AbsolutePath).Directory.FullName;
+            return Path.Combine(pathContextRoot, configuration.File.Path);
         }
     }
 }
