@@ -1,4 +1,4 @@
-# Netboot - Logging [![Build](https://github.com/NetbootCompany/Netboot-Logging/actions/workflows/build.yml/badge.svg)](https://github.com/NetbootCompany/Netboot-Logging/actions/workflows/build.yml) [![NuGet Version](http://img.shields.io/nuget/v/Netboot.Logging.svg?style=flat)](https://www.nuget.org/packages/Netboot.Logging/)  [![Reliability Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=reliability_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Security Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=security_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Code Smells](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=code_smells)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging)
+# Netboot - Logging [![Build](https://github.com/NetbootCommunity/Netboot-Logging/actions/workflows/build.yml/badge.svg)](https://github.com/NetbootCommunity/Netboot-Logging/actions/workflows/build.yml) [![NuGet Version](http://img.shields.io/nuget/v/Netboot.Logging.svg?style=flat)](https://www.nuget.org/packages/Netboot.Logging/)  [![Reliability Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=reliability_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Security Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=security_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Code Smells](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=code_smells)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging)
 
 This project is an add-on to [Serilog](https://serilog.net) to easily configure the logging.
 
@@ -20,7 +20,6 @@ Please consider sponsoring to give me an extra motivational push to develop the 
 > If you represent a company, want to help the entire community and show that you care, please consider sponsoring using one of the higher tiers.
 Your company logo will be shown here for all developers, building a strong positive relation.
 
-
 ## Installation
 
 The library is available as a nuget package. You can install it as any other nuget package from your IDE, try to search by Netboot.Logging.
@@ -37,25 +36,17 @@ dotnet add package Netboot.Logging
 <PackageReference Include="Netboot.Logging" Version="6.2.0" />
 ```
 
-## Configuration
+## Program Configuration
+
+While a .NET 6 console app template generates the new style of top-level statements programs, using .NET 5 doesn't.
+By creating a .NET 5 project, you'll receive the old program style.
+Then, you can edit the project file to target .NET 6 but retain the old program style for the Program.cs file.
+
+### New program style
 
 ```csharp
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Netboot.Logging.Extensions;
-using System;
-using System.IO;
-using System.Reflection;
-
 // Create web application builder.
-var location = new Uri(Assembly.GetEntryAssembly().GetName().CodeBase);
-var pathContextRoot = new FileInfo(location.AbsolutePath).Directory.FullName;
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
-{
-    ContentRootPath = pathContextRoot,
-    Args = args
-});
+var builder = WebApplication.CreateBuilder(args);
 
 // Add serilog implementation.
 builder.Host.UseCustomSerilog();
@@ -63,9 +54,44 @@ builder.Host.UseCustomSerilog();
 ...
 ```
 
-## JSON (Microsoft.Extensions.Configuration)
+### Old program style
 
-Keys and values are not case-sensitive. This is an example of configuring the utility arguments from `Appsettings.json`:
+```csharp
+public static class Program
+{
+    /// <summary>
+    /// Defines the entry point of the application.
+    /// </summary>
+    /// <param name="args">The arguments.</param>
+    public static void Main(string[] args)
+        => CreateHostBuilder(args).Build().Run();
+
+    /// <summary>
+    /// Creates the host builder.
+    /// </summary>
+    /// <param name="args">The arguments.</param>
+    /// <returns></returns>
+    public static IHostBuilder CreateHostBuilder(string[] args)
+    {
+        // Initializes a new instance with pre-configured defaults.
+        var builder = Host.CreateDefaultBuilder(args);
+
+        // Add serilog implementation.
+        builder.UseCustomSerilog();
+
+        // Configures a IHostBuilder with defaults for hosting a web app.
+        builder.ConfigureWebHostDefaults(webBuilder
+            => webBuilder.UseStartup<Startup>().UseKestrel());
+
+        return builder;
+    }
+}
+```
+
+## JSON Configuration
+
+You can override the default configuration for this product by adding settings in your `Appsettings.json`.
+The example below therefore allows you to override the configuration.
 
 ```json
 {
@@ -94,8 +120,8 @@ Everyone is welcome to contribute to this project! Feel free to contribute with 
 
 ## Bugs and Feedback
 
-For bugs, questions and discussions please use the [GitHub Issues](https://github.com/NetbootCompany/Netboot-Logging/issues).
+For bugs, questions and discussions please use the [GitHub Issues](https://github.com/NetbootCommunity/Netboot-Logging/issues).
 
 ## License
 
-This project is licensed under [MIT License](https://github.com/NetbootCompany/Netboot-Logging/blob/main/LICENSE).
+This project is licensed under [MIT License](https://github.com/NetbootCommunity/Netboot-Logging/blob/main/LICENSE).
