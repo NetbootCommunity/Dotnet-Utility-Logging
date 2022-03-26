@@ -5,9 +5,15 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    labels: [ ]
+    reviewers:
+      - "thomas-illiet"
+    labels:
+      - "nuget dependencies"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
-    labels: [ ]
+    reviewers:
+      - "thomas-illiet"
+    labels:
+      - "github dependencies"
