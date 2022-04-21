@@ -1,4 +1,4 @@
-# Netboot - Logging [![Build](https://github.com/NetbootCommunity/Netboot-Logging/actions/workflows/build.yml/badge.svg)](https://github.com/NetbootCommunity/Netboot-Logging/actions/workflows/build.yml) [![NuGet Version](http://img.shields.io/nuget/v/Netboot.Logging.svg?style=flat)](https://www.nuget.org/packages/Netboot.Logging/)  [![Reliability Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=reliability_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Security Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=security_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Code Smells](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=code_smells)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging)
+# Netboot - Logging [![Build](https://github.com/NetbootCommunity/Netboot-Logging/actions/workflows/build.yml/badge.svg)](https://github.com/NetbootCommunity/Netboot-Logging/actions/workflows/build.yml) [![NuGet Version](http://img.shields.io/nuget/v/Netboot.Utility.Logging.svg?style=flat)](https://www.nuget.org/packages/Netboot.Utility.Logging/)  [![Reliability Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=reliability_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Security Rating](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=security_rating)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging) [![Code Smells](https://sonarqube.netboot.fr/api/project_badges/measure?project=netboot_logging&metric=code_smells)](https://sonarqube.netboot.fr/dashboard?id=netboot_logging)
 
 This project is an add-on to [Serilog](https://serilog.net) to easily configure the logging.
 
@@ -22,18 +22,18 @@ Your company logo will be shown here for all developers, building a strong posit
 
 ## Installation
 
-The library is available as a nuget package. You can install it as any other nuget package from your IDE, try to search by Netboot.Logging.
-You can find package details [on this webpage](https://www.nuget.org/packages/Netboot.Logging).
+The library is available as a nuget package. You can install it as any other nuget package from your IDE, try to search by Netboot.Utility.Logging.
+You can find package details [on this webpage](https://www.nuget.org/packages/Netboot.Utility.Logging).
 
 ```xml
 // Package Manager
-Install-Package Netboot.Logging
+Install-Package Netboot.Utility.Logging
 
 // .NET CLI
-dotnet add package Netboot.Logging
+dotnet add package Netboot.Utility.Logging
 
 // Package reference in .csproj file
-<PackageReference Include="Netboot.Logging" Version="6.2.0" />
+<PackageReference Include="Netboot.Utility.Logging" Version="6.2.0" />
 ```
 
 ## Program Configuration

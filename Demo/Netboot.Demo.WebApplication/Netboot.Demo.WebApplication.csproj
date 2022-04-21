@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\Netboot.Logging.csproj" />
+    <ProjectReference Include="..\..\Src\Netboot.Utility.Logging.csproj" />
   </ItemGroup>
 
 </Project>

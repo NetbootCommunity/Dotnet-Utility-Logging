@@ -1,4 +1,4 @@
-﻿using Netboot.Logging.Models;
+﻿using Netboot.Utility.Logging.Models;
 using Serilog;
 using Serilog.Configuration;
 using Serilog.Core;
@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Netboot.Logging.Extensions
+namespace Netboot.Utility.Logging.Extensions
 {
     public static class LoggerEnrichmentExtensions
     {

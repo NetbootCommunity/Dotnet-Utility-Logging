@@ -1,6 +1,6 @@
 ﻿using Serilog;
 
-namespace Netboot.Logging.Models
+namespace Netboot.Utility.Logging.Models
 {
     public class LogFileOption
     {

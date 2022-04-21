@@ -1,6 +1,6 @@
 ﻿using Serilog.Core;
 
-namespace Netboot.Logging.Models
+namespace Netboot.Utility.Logging.Models
 {
     public interface ICustomLogEventEnricher : ILogEventEnricher
     { }

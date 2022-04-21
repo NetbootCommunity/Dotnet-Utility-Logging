@@ -1,4 +1,4 @@
-﻿using Netboot.Logging.Models;
+﻿using Netboot.Utility.Logging.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
@@ -6,7 +6,7 @@ using System.IO;
 using System.Reflection;
 using System;
 
-namespace Netboot.Logging.Extensions
+namespace Netboot.Utility.Logging.Extensions
 {
     public static class LoggerConfigurationExtensions
     {

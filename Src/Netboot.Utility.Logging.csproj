@@ -3,13 +3,13 @@
   <PropertyGroup>
     <Authors>Thomas ILLIET</Authors>
     <Company>NetbootCommunity</Company>
-    <PackageId>Netboot.Logging</PackageId>
+    <PackageId>Netboot.Utility.Logging</PackageId>
     <PackageDescription>Library to quickly and easily add serilog to a dotnet application.</PackageDescription>
     <IsPackable>true</IsPackable>
     <PackageIcon>Logo.png</PackageIcon>
-    <PackageIconUrl>https://raw.githubusercontent.com/NetbootCommunity/Netboot-Logging/main/Assets/Logo.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/NetbootCommunity/Dotnet-Utility-Logging/main/Assets/Logo.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/NetbootCommunity</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/NetbootCommunity/Netboot-Logging</RepositoryUrl>
+    <RepositoryUrl>https://github.com/NetbootCommunity/Dotnet-Utility-Logging</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Copyright>Thomas ILLIET, NetbootCommunity contributors</Copyright>
     <PackageTags>utility library log microservice dotnet serilog</PackageTags>

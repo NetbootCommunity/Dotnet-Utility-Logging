@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Netboot.Logging.Extensions;
+using Netboot.Utility.Logging.Extensions;
 using System;
 using System.Linq;
 
